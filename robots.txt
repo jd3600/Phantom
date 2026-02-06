@@ -1,0 +1,13 @@
+# Phant_m - Robots.txt
+User-agent: *
+Allow: /
+Allow: /articles/
+Allow: /css/
+Allow: /js/
+
+# Sitemap (Remplace par ton vrai domaine !)
+Sitemap: https://ton-domaine.com/sitemap.xml
+
+# Crawl-delay
+# Retiré car Googlebot ignore cette directive. 
+# Il gère sa vitesse tout seul via la Search Console.

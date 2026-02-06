@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Paradoxe de l'Information - Phant_m</title>
+    <meta name="description" content="Rien ne s'échappe d'un trou noir, sauf peut-être l'information. Exploration du savoir à l'ère de la saturation numérique.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-container">
+                    <img src="../logo.svg" alt="Phant_m Logo" class="logo-img">
+                    <div class="logo-text">Phant_m</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link"><i class="bi bi-house"></i> Accueil</a></li>
+                        <li><a href="../index.html#articles" class="nav-link active"><i class="bi bi-file-earmark-text"></i> Articles</a></li>
+                        <li><a href="../index.html#contact" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="ad-sidebar-container" style="padding: 10px; border: 1px dashed #d7e3fc; border-radius: 12px; background: #fafafa; text-align: center; cursor: pointer;" onclick="triggerAd('sidebar-adsense')">
+                    <small style="font-size: 0.6rem; color: #bbb; text-transform: uppercase;">Publicité</small>
+                    <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #888;">
+                        <i class="bi bi-aspect-ratio" style="font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.7rem;">Sponsor Local</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <article class="page active">
+                <a href="../index.html" class="back-btn-article" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #28a745; margin-bottom: 20px; font-family: monospace; font-weight: bold;">
+                    <i class="bi bi-arrow-left"></i> [ RETOUR AU FLUX ]
+                </a>
+                <div class="article-meta">06 Février 2026</div>
+                <h1>Le Paradoxe de l'Information</h1>
+                <div class="article-author">Phant_m Lab</div>
+                <hr class="modal-divider">
+                <div class="modal-text">
+                    <h3>Le Trou Noir du Savoir</h3>
+                    <p>Stephen Hawking a révolutionné la physique en suggérant que les trous noirs ne sont pas totalement noirs. Ils émettent une radiation. Cependant, le paradoxe demeure : si vous jetez un livre dans un trou noir, l'information qu'il contient est-elle détruite à jamais ou stockée sur l'horizon des événements ?</p>
+                    
+                    <p>À l'ère du flux numérique infini, nous vivons un paradoxe similaire. Nous absorbons des gigaoctets de données, mais notre savoir réel semble s'évaporer. Nous créons des trous noirs cognitifs où l'information entre, mais ne ressort jamais sous forme de sagesse.</p>
+                    
+                    <div class="content-gate">
+                        <div class="adsense-slot-middle" style="min-height:90px; margin-bottom:15px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">ANNONCE SPONSORISÉE</div>
+                        <div class="gate-overlay">
+                            <button class="premium-unlock pulse" onclick="triggerAd('click-reward'); unlockContent(this)">
+                                <i class="bi bi-lock-fill"></i> [ DÉCRYPTER L'HORIZON DES ÉVÉNEMENTS ]
+                            </button>
+                        </div>
+                        <div class="locked-content" style="display:none; filter: blur(5px);">
+                            <p>En algèbre informationnelle, la valeur d'une donnée est inversement proportionnelle à sa disponibilité. Plus nous avons accès à tout, moins nous possédons de choses. La solution réside dans la "Radiation de Hawking" de l'esprit : la capacité à synthétiser et à rejeter l'inutile pour ne garder que l'essentiel.</p>
+                            
+                            <p>Le design de Phant_m est une réponse à ce paradoxe. En limitant le bruit visuel, nous forçons l'information à se stabiliser. Nous ne stockons pas la donnée, nous filtrons l'énergie.</p>
+                            
+                            <p>Si l'univers est un hologramme où l'information est stockée en surface, alors votre écran est la frontière de votre réalité. Choisissez bien ce que vous y laissez entrer. Car une fois franchi l'horizon des événements, il n'y a plus de retour en arrière.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="adsense-slot-bottom" style="min-height:250px; margin-top:20px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">PUBLICITÉ CIBLÉE</div>
+                </div>
+                
+                <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; gap: 15px;">
+                    <button class="modal-action-btn like-btn" title="Like"><i class="bi bi-heart"></i></button>
+                    <button class="modal-action-btn second-like-btn" title="J'aime"><i class="bi bi-hand-thumbs-up"></i></button>
+                    <button class="modal-action-btn share-btn" title="Discussion"><i class="bi bi-chat-dots"></i></button>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>

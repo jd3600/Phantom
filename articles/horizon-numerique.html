@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon 2.0 - Phant_m</title>
+    <meta name="description" content="Le futur est indicatif. Au-delà de la Grille.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-container">
+                    <img src="../logo.svg" alt="Phant_m Logo" class="logo-img">
+                    <div class="logo-text">Phant_m</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link"><i class="bi bi-house"></i> Accueil</a></li>
+                        <li><a href="../index.html#articles" class="nav-link active"><i class="bi bi-file-earmark-text"></i> Articles</a></li>
+                        <li><a href="../index.html#contact" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="ad-sidebar-container" style="padding: 10px; border: 1px dashed #d7e3fc; border-radius: 12px; background: #fafafa; text-align: center; cursor: pointer;" onclick="triggerAd('sidebar-adsense')">
+                    <small style="font-size: 0.6rem; color: #bbb; text-transform: uppercase;">Publicité</small>
+                    <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #888;">
+                        <i class="bi bi-aspect-ratio" style="font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.7rem;">Sponsor Local</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <article class="page active">
+                <a href="../index.html" class="back-btn-article" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #28a745; margin-bottom: 20px; font-family: monospace; font-weight: bold;">
+                    <i class="bi bi-arrow-left"></i> [ RETOUR AU FLUX ]
+                </a>
+                <div class="article-meta">07 Février 2026</div>
+                <h1>Horizon 2.0</h1>
+                <div class="article-author">Phant_m Core</div>
+                <hr class="modal-divider">
+                <div class="modal-text">
+                    <h3>Au-delà de la Grille</h3>
+                    <p>Le futur est indicatif, non impératif. Horizon 2.0 représente la prochaine itération de Phant_m, où les interfaces deviennent des espaces topologiques navigables. La grille cartésienne traditionnelle laisse place à des manifolds différentiables, des surfaces courbes où l'information se plie selon les besoins de l'utilisateur.</p>
+                    
+                    <p>Dans cette vision, chaque élément d'interface est un tenseur multidimensionnel capable de se transformer selon le contexte. Un bouton n'est plus un rectangle statique mais un champ vectoriel qui réagit aux intentions avant même le clic. L'algèbre linéaire devient l'algèbre de l'interaction.</p>
+                    
+                    <div class="content-gate">
+                        <div class="adsense-slot-middle" style="min-height:90px; margin-bottom:15px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">ANNONCE SPONSORISÉE</div>
+                        <div class="gate-overlay">
+                            <button class="premium-unlock pulse" onclick="triggerAd('click-reward'); unlockContent(this)">
+                                <i class="bi bi-lock-fill"></i> [ DÉVERROUILLER LA SESSION EXCLUSIVE ]
+                            </button>
+                        </div>
+                        <div class="locked-content" style="display:none; filter: blur(5px);">
+                            <p>Les transformations affines permettent de créer des transitions fluides entre états d'interface. Une rotation de 45° dans l'espace RGB produit des dégradés impossibles à obtenir par interpolation linéaire. Phant_m 2.0 exploite ces propriétés pour générer des animations qui semblent organiques mais sont parfaitement déterministes.</p>
+                            
+                            <p>La théorie des graphes influence la navigation : chaque page est un nœud, chaque lien une arête pondérée par la pertinence sémantique. L'algorithme de Dijkstra optimise le parcours utilisateur en temps réel, suggérant des chemins que l'utilisateur n'aurait jamais imaginés.</p>
+                            
+                            <p>L'intelligence artificielle n'est pas une couche ajoutée mais une propriété émergente du système. Les réseaux de neurones convolutifs analysent les patterns visuels pour adapter automatiquement les contrastes, les espacements et les hiérarchies typographiques selon les préférences implicites de l'utilisateur.</p>
+                            
+                            <p>Horizon 2.0 n'est pas une destination mais un processus continu d'optimisation. Chaque interaction génère des données qui affinent le modèle, créant une boucle de rétroaction positive où le design s'améliore asymptotiquement vers la perfection ergonomique. Le futur n'est pas à prédire : il est à calculer.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="adsense-slot-bottom" style="min-height:250px; margin-top:20px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">PUBLICITÉ CIBLÉE</div>
+                </div>
+                <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; gap: 15px;">
+                    <button class="modal-action-btn like-btn" title="Like"><i class="bi bi-heart"></i></button>
+                    <button class="modal-action-btn second-like-btn" title="J'aime"><i class="bi bi-hand-thumbs-up"></i></button>
+                    <button class="modal-action-btn share-btn" title="Discussion"><i class="bi bi-chat-dots"></i></button>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>

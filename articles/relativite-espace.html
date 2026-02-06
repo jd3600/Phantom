@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relativité de l'Espace - Phant_m</title>
+    <meta name="description" content="L'espace n'est pas un vide inerte, il se courbe sous le poids de nos idées. Une exploration de la gravitation du design.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-container">
+                    <img src="../logo.svg" alt="Phant_m Logo" class="logo-img">
+                    <div class="logo-text">Phant_m</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link"><i class="bi bi-house"></i> Accueil</a></li>
+                        <li><a href="../index.html#articles" class="nav-link active"><i class="bi bi-file-earmark-text"></i> Articles</a></li>
+                        <li><a href="../index.html#contact" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="ad-sidebar-container" style="padding: 10px; border: 1px dashed #d7e3fc; border-radius: 12px; background: #fafafa; text-align: center; cursor: pointer;" onclick="triggerAd('sidebar-adsense')">
+                    <small style="font-size: 0.6rem; color: #bbb; text-transform: uppercase;">Publicité</small>
+                    <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #888;">
+                        <i class="bi bi-aspect-ratio" style="font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.7rem;">Sponsor Local</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <article class="page active">
+                <a href="../index.html" class="back-btn-article" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #28a745; margin-bottom: 20px; font-family: monospace; font-weight: bold;">
+                    <i class="bi bi-arrow-left"></i> [ RETOUR AU FLUX ]
+                </a>
+                <div class="article-meta">06 Février 2026</div>
+                <h1>La Relativité de l'Espace</h1>
+                <div class="article-author">Phant_m Lab</div>
+                <hr class="modal-divider">
+                <div class="modal-text">
+                    <h3>La Gravitation de l'Idée</h3>
+                    <p>Dans la physique d'Einstein, l'espace n'est pas un vide inerte. Il se courbe sous l'influence de la masse. Sur l'interface de notre existence, un concept fort crée une gravitation qui attire l'attention et déforme la perception du temps.</p>
+                    
+                    <p>L'algèbre nous enseigne que chaque variable possède un poids. En design de pensée, si vous placez un élément central trop lourd — une obsession ou une équation non résolue — tout l'espace environnant commence à s'organiser autour de lui.</p>
+                    
+                    <div class="content-gate">
+                        <div class="adsense-slot-middle" style="min-height:90px; margin-bottom:15px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">ANNONCE SPONSORISÉE</div>
+                        <div class="gate-overlay">
+                            <button class="premium-unlock pulse" onclick="triggerAd('click-reward'); unlockContent(this)">
+                                <i class="bi bi-lock-fill"></i> [ DÉVERROUILLER LA COURBURE ]
+                            </button>
+                        </div>
+                        <div class="locked-content" style="display:none; filter: blur(5px);">
+                            <p>Le vide n'est pas une absence, mais un réservoir de potentiel. Plus la structure est dense, plus le vide devient précieux. Manipuler cette relativité, c'est diriger le regard là où l'invisible devient manifeste.</p>
+                            
+                            <p>Nous ne dessinons pas des lignes ; nous créons des champs de force. En mathématiques, la courbure d'un espace est définie par son tenseur de Riemann. En design, elle est définie par l'émotion résiduelle après le passage du regard.</p>
+                            
+                            <p>Chaque pixel est un vecteur, chaque couleur une coordonnée. La beauté n'est pas subjective : elle est la solution optimale d'une équation dont nous avons oublié les termes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="adsense-slot-bottom" style="min-height:250px; margin-top:20px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">PUBLICITÉ CIBLÉE</div>
+                </div>
+                
+                <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; gap: 15px;">
+                    <button class="modal-action-btn like-btn" title="Like"><i class="bi bi-heart"></i></button>
+                    <button class="modal-action-btn second-like-btn" title="J'aime"><i class="bi bi-hand-thumbs-up"></i></button>
+                    <button class="modal-action-btn share-btn" title="Discussion"><i class="bi bi-chat-dots"></i></button>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>

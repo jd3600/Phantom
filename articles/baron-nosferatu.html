@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Phant_m - Phant_m</title>
+    <meta name="description" content="L'esthétique de Phant_m s'inspire du concept de la Libre Pensée...">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-container">
+                    <img src="../logo.svg" alt="Phant_m Logo" class="logo-img">
+                    <div class="logo-text">Phant_m</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link"><i class="bi bi-house"></i> Accueil</a></li>
+                        <li><a href="../index.html#articles" class="nav-link active"><i class="bi bi-file-earmark-text"></i> Articles</a></li>
+                        <li><a href="../index.html#contact" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="ad-sidebar-container" style="padding: 10px; border: 1px dashed #d7e3fc; border-radius: 12px; background: #fafafa; text-align: center; cursor: pointer;" onclick="triggerAd('sidebar-adsense')">
+                    <small style="font-size: 0.6rem; color: #bbb; text-transform: uppercase;">Publicité</small>
+                    <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #888;">
+                        <i class="bi bi-aspect-ratio" style="font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.7rem;">Sponsor Local</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <article class="page active">
+                <a href="../index.html" class="back-btn-article" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #28a745; margin-bottom: 20px; font-family: monospace; font-weight: bold;">
+                    <i class="bi bi-arrow-left"></i> [ RETOUR AU FLUX ]
+                </a>
+                <div class="article-meta">04 Février 2026</div>
+                <h1>Architecture Phant_m</h1>
+                <div class="article-author">Baron Nosferatu</div>
+                <hr class="modal-divider">
+                <div class="modal-text">
+                    <h3>La Géométrie de la Liberté</h3>
+                    <p>L'esthétique de <strong>Phant_m</strong> s'inspire du concept de la Libre Pensée, une philosophie qui refuse les dogmes et privilégie l'autonomie intellectuelle. Dans le design comme dans l'algèbre, la liberté se manifeste par la capacité à créer des structures cohérentes sans contraintes arbitraires.</p>
+                    
+                    <p>Le minimalisme de Phant_m n'est pas une simple tendance esthétique, c'est une déclaration mathématique. Chaque élément visuel correspond à une fonction précise, comme les axiomes d'un système formel. La géométrie euclidienne nous enseigne que la beauté émerge de la simplicité : un point, une ligne, un plan suffisent à construire l'univers.</p>
+                    
+                    <div class="content-gate">
+                        <div class="adsense-slot-middle" style="min-height:90px; margin-bottom:15px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">ANNONCE SPONSORISÉE</div>
+                        <div class="gate-overlay">
+                            <button class="premium-unlock pulse" onclick="triggerAd('click-reward'); unlockContent(this)">
+                                <i class="bi bi-lock-fill"></i> [ DÉVERROUILLER LA SESSION EXCLUSIVE ]
+                            </button>
+                        </div>
+                        <div class="locked-content" style="display:none; filter: blur(5px);">
+                            <p>Les espaces vectoriels du design moderne trouvent leur expression dans les marges négatives, les grilles asymétriques et les proportions dorées. Phant_m utilise le ratio φ (phi) = 1.618 pour définir ses espacements, créant une harmonie mathématique invisible mais perceptible.</p>
+                            
+                            <p>La typographie monospace n'est pas un choix nostalgique mais une référence aux matrices de caractères, où chaque lettre occupe un espace égal dans l'espace vectoriel du texte. Cette uniformité crée un rythme visuel comparable aux séquences de Fibonacci dans la nature.</p>
+                            
+                            <p>L'architecture de Phant_m repose sur trois piliers algébriques : la <strong>symétrie</strong> (invariance par transformation), la <strong>modularité</strong> (composition d'éléments indépendants) et l'<strong>orthogonalité</strong> (séparation des préoccupations). Ces principes garantissent que le système reste cohérent à toutes les échelles.</p>
+                            
+                            <p>En conclusion, Phant_m démontre que le design n'est pas l'opposé de la rigueur mathématique, mais son expression la plus pure. Chaque pixel est un vecteur, chaque couleur une coordonnée dans l'espace RGB, chaque interaction une fonction dérivable. La beauté n'est pas subjective : elle est calculable.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="adsense-slot-bottom" style="min-height:250px; margin-top:20px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">PUBLICITÉ CIBLÉE</div>
+                </div>
+                <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; gap: 15px;"></div>
+                    <button class="modal-action-btn like-btn" title="Like"><i class="bi bi-heart"></i></button>
+                    <button class="modal-action-btn second-like-btn" title="J'aime"><i class="bi bi-hand-thumbs-up"></i></button>
+                    <button class="modal-action-btn share-btn" title="Discussion"><i class="bi bi-chat-dots"></i></button>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ TERMINAL STATS ] - Phant_m Analytics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000000;
+            color: #28a745;
+            font-family: 'Courier New', monospace;
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        .terminal-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 2px solid #28a745;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(40, 167, 69, 0.3);
+        }
+
+        .terminal-header {
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .terminal-header h1 {
+            font-size: 2rem;
+            letter-spacing: 3px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.5; }
+        }
+
+        .terminal-header .timestamp {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+
+        .stats-section {
+            margin-bottom: 40px;
+        }
+
+        .stats-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #28a745;
+            border-left: 4px solid #28a745;
+            padding-left: 15px;
+        }
+
+        .global-counter {
+            background: rgba(40, 167, 69, 0.1);
+            border: 1px solid #28a745;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .global-counter .number {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #28a745;
+            text-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+        }
+
+        .global-counter .label {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .stats-table th,
+        .stats-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(40, 167, 69, 0.3);
+        }
+
+        .stats-table th {
+            background: rgba(40, 167, 69, 0.2);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .stats-table tr:hover {
+            background: rgba(40, 167, 69, 0.05);
+        }
+
+        .stats-table .count {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .stats-table .engagement-level {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .engagement-high {
+            background: rgba(40, 167, 69, 0.3);
+            color: #28a745;
+        }
+
+        .engagement-medium {
+            background: rgba(255, 193, 7, 0.3);
+            color: #ffc107;
+        }
+
+        .engagement-low {
+            background: rgba(220, 53, 69, 0.3);
+            color: #dc3545;
+        }
+
+        .terminal-actions {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .terminal-btn {
+            background: transparent;
+            border: 2px solid #28a745;
+            color: #28a745;
+            padding: 15px 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .terminal-btn:hover {
+            background: #28a745;
+            color: #000000;
+            box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
+        }
+
+        .terminal-btn i {
+            font-size: 1.2rem;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            opacity: 0.5;
+            font-style: italic;
+        }
+
+        .report-output {
+            background: rgba(40, 167, 69, 0.05);
+            border: 1px solid #28a745;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .terminal-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .global-counter .number {
+                font-size: 3rem;
+            }
+
+            .stats-table {
+                font-size: 0.85rem;
+            }
+
+            .terminal-actions {
+                flex-direction: column;
+            }
+
+            .terminal-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <h1><i class="bi bi-terminal"></i> [ TERMINAL STATS - PHANT_M ANALYTICS ]</h1>
+            <div class="timestamp" id="timestamp"></div>
+        </div>
+
+        <div class="stats-section">
+            <h2>[ ENGAGEMENT GLOBAL ]</h2>
+            <div class="global-counter">
+                <div class="number" id="total-unlocks">0</div>
+                <div class="label">DÉBLOCAGES TOTAUX</div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <h2>[ DÉTAILS PAR SESSION ]</h2>
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th>Article</th>
+                        <th>Déblocages</th>
+                        <th>Cœurs</th>
+                        <th>Likes</th>
+                        <th>Engagement</th>
+                    </tr>
+                </thead>
+                <tbody id="stats-tbody">
+                    <tr>
+                        <td colspan="5" class="no-data">Chargement des données...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stats-section">
+            <h2>[ AUTRES INTERACTIONS ]</h2>
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th>Type d'Interaction</th>
+                        <th>Compteur</th>
+                    </tr>
+                </thead>
+                <tbody id="other-stats-tbody">
+                    <tr>
+                        <td colspan="2" class="no-data">Chargement des données...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="terminal-actions">
+            <button class="terminal-btn" onclick="generateReport()">
+                <i class="bi bi-file-earmark-text"></i>
+                GÉNÉRER RAPPORT D'AUDIENCE
+            </button>
+            <button class="terminal-btn" onclick="refreshStats()">
+                <i class="bi bi-arrow-clockwise"></i>
+                ACTUALISER
+            </button>
+            <button class="terminal-btn" onclick="exportData()">
+                <i class="bi bi-download"></i>
+                EXPORTER JSON
+            </button>
+            <button class="terminal-btn" onclick="clearStats()" style="border-color: #dc3545; color: #dc3545;">
+                <i class="bi bi-trash"></i>
+                RÉINITIALISER
+            </button>
+        </div>
+
+        <div class="report-output" id="report-output"></div>
+    </div>
+
+    <script>
+        // Fonction pour formater la date
+        function updateTimestamp() {
+            const now = new Date();
+            const formatted = now.toLocaleString('fr-FR', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('timestamp').textContent = `[ ${formatted} ]`;
+        }
+
+        // Fonction pour déterminer le niveau d'engagement
+        function getEngagementLevel(count) {
+            if (count >= 50) return { class: 'engagement-high', text: 'FORT' };
+            if (count >= 20) return { class: 'engagement-medium', text: 'MOYEN' };
+            return { class: 'engagement-low', text: 'FAIBLE' };
+        }
+
+        // Charger et afficher les statistiques
+        function loadStats() {
+            const unlockStats = JSON.parse(localStorage.getItem('phantm_unlock_stats')) || {};
+            const reactionStats = JSON.parse(localStorage.getItem('phantm_reaction_stats')) || {};
+            const otherStats = JSON.parse(localStorage.getItem('phantm_dist_stats')) || {};
+
+            // Calculer le total des déblocages
+            const totalUnlocks = Object.values(unlockStats).reduce((sum, val) => sum + val, 0);
+            document.getElementById('total-unlocks').textContent = totalUnlocks;
+
+            // Afficher les stats par article
+            const tbody = document.getElementById('stats-tbody');
+            if (Object.keys(unlockStats).length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="no-data">Aucune donnée de déblocage disponible</td></tr>';
+            } else {
+                const sortedStats = Object.entries(unlockStats).sort((a, b) => b[1] - a[1]);
+                tbody.innerHTML = sortedStats.map(([article, unlockCount]) => {
+                    const engagement = getEngagementLevel(unlockCount);
+                    const heartKey = `${article}_heart`;
+                    const likeKey = `${article}_like`;
+                    const hearts = reactionStats[heartKey] || 0;
+                    const likes = reactionStats[likeKey] || 0;
+                    
+                    return `
+                        <tr>
+                            <td>${article}</td>
+                            <td class="count">${unlockCount}</td>
+                            <td class="count" style="color: #ff6b6b;">${hearts}</td>
+                            <td class="count" style="color: #4dabf7;">${likes}</td>
+                            <td><span class="stats-table .engagement-level ${engagement.class}">${engagement.text}</span></td>
+                        </tr>
+                    `;
+                }).join('');
+            }
+
+            // Afficher les autres interactions
+            const otherTbody = document.getElementById('other-stats-tbody');
+            if (Object.keys(otherStats).length === 0) {
+                otherTbody.innerHTML = '<tr><td colspan="2" class="no-data">Aucune autre interaction enregistrée</td></tr>';
+            } else {
+                const sortedOther = Object.entries(otherStats).sort((a, b) => b[1] - a[1]);
+                otherTbody.innerHTML = sortedOther.map(([type, count]) => `
+                    <tr>
+                        <td>${type}</td>
+                        <td class="count">${count}</td>
+                    </tr>
+                `).join('');
+            }
+        }
+
+        // Générer un rapport textuel
+        function generateReport() {
+            const unlockStats = JSON.parse(localStorage.getItem('phantm_unlock_stats')) || {};
+            const reactionStats = JSON.parse(localStorage.getItem('phantm_reaction_stats')) || {};
+            const totalUnlocks = Object.values(unlockStats).reduce((sum, val) => sum + val, 0);
+            
+            let report = `═══════════════════════════════════════════════════════════\n`;
+            report += `  RAPPORT D'AUDIENCE PHANT_M\n`;
+            report += `  Généré le: ${new Date().toLocaleString('fr-FR')}\n`;
+            report += `═══════════════════════════════════════════════════════════\n\n`;
+            report += `ENGAGEMENT GLOBAL: ${totalUnlocks} déblocages totaux\n\n`;
+            report += `DÉTAILS PAR ARTICLE:\n`;
+            report += `───────────────────────────────────────────────────────────\n`;
+
+            if (Object.keys(unlockStats).length === 0) {
+                report += `Aucune donnée disponible.\n`;
+            } else {
+                const sortedStats = Object.entries(unlockStats).sort((a, b) => b[1] - a[1]);
+                sortedStats.forEach(([article, unlockCount]) => {
+                    const engagement = getEngagementLevel(unlockCount);
+                    const heartKey = `${article}_heart`;
+                    const likeKey = `${article}_like`;
+                    const hearts = reactionStats[heartKey] || 0;
+                    const likes = reactionStats[likeKey] || 0;
+                    
+                    report += `• ${article}:\n`;
+                    report += `  - Déblocages: ${unlockCount}\n`;
+                    report += `  - Cœurs: ${hearts}\n`;
+                    report += `  - Likes: ${likes}\n`;
+                    report += `  - Taux d'engagement: ${engagement.text}\n\n`;
+                });
+            }
+
+            report += `═══════════════════════════════════════════════════════════\n`;
+            report += `ANALYSE:\n`;
+            report += `───────────────────────────────────────────────────────────\n`;
+            
+            if (totalUnlocks > 0) {
+                const avgUnlocks = (totalUnlocks / Object.keys(unlockStats).length).toFixed(1);
+                report += `• Moyenne de déblocages par article: ${avgUnlocks}\n`;
+                const topArticle = Object.entries(unlockStats).sort((a, b) => b[1] - a[1])[0];
+                report += `• Article le plus performant: ${topArticle[0]} (${topArticle[1]} déblocages)\n`;
+                
+                // Calculer les totaux de réactions
+                const totalHearts = Object.keys(reactionStats)
+                    .filter(key => key.endsWith('_heart'))
+                    .reduce((sum, key) => sum + reactionStats[key], 0);
+                const totalLikes = Object.keys(reactionStats)
+                    .filter(key => key.endsWith('_like'))
+                    .reduce((sum, key) => sum + reactionStats[key], 0);
+                    
+                report += `• Total de cœurs: ${totalHearts}\n`;
+                report += `• Total de likes: ${totalLikes}\n`;
+            } else {
+                report += `Pas encore de données d'engagement.\n`;
+            }
+
+            report += `═══════════════════════════════════════════════════════════\n`;
+
+            const output = document.getElementById('report-output');
+            output.textContent = report;
+            output.style.display = 'block';
+        }
+
+        // Actualiser les stats
+        function refreshStats() {
+            loadStats();
+            updateTimestamp();
+        }
+
+        // Exporter les données en JSON
+        function exportData() {
+            const data = {
+                unlockStats: JSON.parse(localStorage.getItem('phantm_unlock_stats')) || {},
+                reactionStats: JSON.parse(localStorage.getItem('phantm_reaction_stats')) || {},
+                otherStats: JSON.parse(localStorage.getItem('phantm_dist_stats')) || {},
+                exportDate: new Date().toISOString()
+            };
+
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `phantm-stats-${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Réinitialiser les stats
+        function clearStats() {
+            if (confirm('⚠️ ATTENTION: Voulez-vous vraiment réinitialiser toutes les statistiques ?')) {
+                localStorage.removeItem('phantm_unlock_stats');
+                localStorage.removeItem('phantm_reaction_stats');
+                localStorage.removeItem('phantm_dist_stats');
+                loadStats();
+                updateTimestamp();
+                alert('✓ Statistiques réinitialisées');
+            }
+        }
+
+        // Initialisation
+        updateTimestamp();
+        loadStats();
+        setInterval(updateTimestamp, 1000);
+    </script>
+</body>
+</html>

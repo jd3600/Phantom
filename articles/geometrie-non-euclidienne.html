@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Géométrie Non-Euclidienne - Phant_m</title>
+    <meta name="description" content="Pourquoi le chemin le plus court n'est pas toujours la ligne droite. Une exploration des espaces courbes de la pensée.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-container">
+                    <img src="../logo.svg" alt="Phant_m Logo" class="logo-img">
+                    <div class="logo-text">Phant_m</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link"><i class="bi bi-house"></i> Accueil</a></li>
+                        <li><a href="../index.html#articles" class="nav-link active"><i class="bi bi-file-earmark-text"></i> Articles</a></li>
+                        <li><a href="../index.html#contact" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="ad-sidebar-container" style="padding: 10px; border: 1px dashed #d7e3fc; border-radius: 12px; background: #fafafa; text-align: center; cursor: pointer;" onclick="triggerAd('sidebar-adsense')">
+                    <small style="font-size: 0.6rem; color: #bbb; text-transform: uppercase;">Publicité</small>
+                    <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #888;">
+                        <i class="bi bi-aspect-ratio" style="font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.7rem;">Sponsor Local</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <article class="page active">
+                <a href="../index.html" class="back-btn-article" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #28a745; margin-bottom: 20px; font-family: monospace; font-weight: bold;">
+                    <i class="bi bi-arrow-left"></i> [ RETOUR AU FLUX ]
+                </a>
+                <div class="article-meta">06 Février 2026</div>
+                <h1>Géométrie Non-Euclidienne</h1>
+                <div class="article-author">Phant_m Lab</div>
+                <hr class="modal-divider">
+                <div class="modal-text">
+                    <h3>Sortir des Lignes Droites</h3>
+                    <p>Depuis Euclide, nous sommes programmés pour croire que la ligne droite est le chemin le plus court entre deux points. C’est vrai sur une feuille de papier, mais c’est faux dans l’univers. Sur une sphère ou un espace hyperbolique, la vérité est courbe.</p>
+                    
+                    <p>Dans nos carrières et nos processus créatifs, nous cherchons désespérément cette ligne droite vers le succès. Pourtant, l'algèbre de la vie est non-euclidienne : les détours, les échecs et les changements de trajectoire sont souvent les véritables "géodésiques", les chemins les plus efficaces vers notre destination réelle.</p>
+                    
+                    <div class="content-gate">
+                        <div class="adsense-slot-middle" style="min-height:90px; margin-bottom:15px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">ANNONCE SPONSORISÉE</div>
+                        <div class="gate-overlay">
+                            <button class="premium-unlock pulse" onclick="triggerAd('click-reward'); unlockContent(this)">
+                                <i class="bi bi-lock-fill"></i> [ EXPLORER LES DIMENSIONS COURBES ]
+                            </button>
+                        </div>
+                        <div class="locked-content" style="display:none; filter: blur(5px);">
+                            <p>En design, l'orthogonalité (les angles à 90°) apporte la stabilité, mais la courbure apporte la vie. Phant_m explore cette tension. Un espace vectoriel n'est pas forcément plat ; il peut se plier pour révéler des solutions invisibles au premier regard.</p>
+
+                            
+                            
+                            <p>Riemann et Lobatchevski ont prouvé que l'on pouvait rejeter le cinquième postulat d'Euclide et construire un monde tout aussi cohérent. C’est notre mission ici : prouver que l’on peut rejeter les dogmes du design classique pour construire une expérience utilisateur radicale et libre.</p>
+                            
+                            <p>La beauté d'une interface ne réside pas dans sa rigidité, mais dans sa capacité à épouser la courbure de l'esprit humain. Ne cherchez plus la ligne droite. Apprenez à aimer la courbe.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="adsense-slot-bottom" style="min-height:250px; margin-top:20px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">PUBLICITÉ CIBLÉE</div>
+                </div>
+                
+                <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; gap: 15px;">
+                    <button class="modal-action-btn like-btn" title="Like"><i class="bi bi-heart"></i></button>
+                    <button class="modal-action-btn second-like-btn" title="J'aime"><i class="bi bi-hand-thumbs-up"></i></button>
+                    <button class="modal-action-btn share-btn" title="Discussion"><i class="bi bi-chat-dots"></i></button>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>

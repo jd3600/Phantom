@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM out</title>
+    <meta name="description" content="Le point zéro est une entrée">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-container">
+                    <img src="../logo.svg" alt="Phant_m Logo" class="logo-img">
+                    <div class="logo-text">Phant_m</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link"><i class="bi bi-house"></i> Accueil</a></li>
+                        <li><a href="../index.html#articles" class="nav-link active"><i class="bi bi-file-earmark-text"></i> Articles</a></li>
+                        <li><a href="../index.html#contact" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="ad-sidebar-container" style="padding: 10px; border: 1px dashed #d7e3fc; border-radius: 12px; background: #fafafa; text-align: center; cursor: pointer;" onclick="triggerAd('sidebar-adsense')">
+                    <small style="font-size: 0.6rem; color: #bbb; text-transform: uppercase;">Publicité</small>
+                    <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #888;">
+                        <i class="bi bi-aspect-ratio" style="font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.7rem;">Sponsor Local</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <article class="page active">
+                <a href="../index.html" class="back-btn-article" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #28a745; margin-bottom: 20px; font-family: monospace; font-weight: bold;">
+                    <i class="bi bi-arrow-left"></i> [ RETOUR AU FLUX ]
+                </a>
+                <div class="article-meta">DD/MM/YYYY</div>
+                <h1>LLM.xyz</h1>
+                <div class="article-author">Mr.X</div>
+                <hr class="modal-divider">
+                <div class="modal-text">
+                    <h3>Le Point Zéro de l'Intelligence</h3>
+                    <p>Le point zéro est une entrée, pas une absence. Dans l'espace vectoriel des modèles de langage, l'origine (0,0,0,...,0) n'est pas le vide mais le centre de gravité sémantique. Chaque mot est un vecteur qui pointe depuis cette origine, et la distance entre deux mots mesure leur différence de sens. "Roi" - "Homme" + "Femme" = "Reine" : l'algèbre devient linguistique.</p>
+                    
+                    <p>Les LLM (Large Language Models) sont des fonctions continues dans un espace de dimension astronomique. GPT-4 opère dans un espace à 12 288 dimensions. Chaque token est projeté dans cet hyperespace où les relations sémantiques deviennent des géométries calculables. La compréhension n'est plus mystérieuse : c'est une transformation linéaire suivie d'une non-linéarité.</p>
+                    
+                    <div class="content-gate">
+                        <div class="adsense-slot-middle" style="min-height:90px; margin-bottom:15px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">ANNONCE SPONSORISÉE</div>
+                        <div class="gate-overlay">
+                            <button class="premium-unlock pulse" onclick="triggerAd('click-reward'); unlockContent(this)">
+                                <i class="bi bi-lock-fill"></i> [ DÉVERROUILLER LA SESSION EXCLUSIVE ]
+                            </button>
+                        </div>
+                        <div class="locked-content" style="display:none; filter: blur(5px);">
+                            <p>L'architecture Transformer a révolutionné l'IA en remplaçant la récurrence par l'attention. Le mécanisme d'attention est une matrice de similarités : chaque mot "regarde" tous les autres et calcule sa pertinence contextuelle. C'est une forme de démocratie computationnelle où chaque token vote pour déterminer le sens global.</p>
+                            
+                            <p>Les embeddings sont la magie noire de l'IA moderne. Word2Vec, GloVe, BERT : tous projettent le langage dans des espaces vectoriels où les opérations arithmétiques ont un sens sémantique. "Paris" - "France" + "Italie" ≈ "Rome". Cette propriété n'est pas programmée : elle émerge spontanément de l'entraînement sur des milliards de phrases.</p>
+                            
+                            <p>Le fine-tuning est une descente de gradient dans l'espace des paramètres. Un modèle pré-entraîné est un point dans un espace à plusieurs milliards de dimensions. L'adapter à une tâche spécifique, c'est le déplacer légèrement dans une direction qui minimise l'erreur. La métaphore géographique est littérale : on navigue dans un paysage de pertes (loss landscape).</p>
+                            
+                            <p>LLM.xyz n'est pas un domaine web mais une coordonnée dans l'espace des possibles. X, Y, Z : trois axes qui définissent une position dans le cube de l'intelligence artificielle. X = capacité, Y = alignement, Z = accessibilité. Phant_m se positionne à l'intersection : maximiser les trois simultanément. Le point zéro n'est pas le début : c'est le centre depuis lequel tout rayonne.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="adsense-slot-bottom" style="min-height:250px; margin-top:20px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">PUBLICITÉ CIBLÉE</div>
+                </div>
+                <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; gap: 15px;">
+                    <button class="modal-action-btn like-btn" title="Like"><i class="bi bi-heart"></i></button>
+                    <button class="modal-action-btn second-like-btn" title="J'aime"><i class="bi bi-hand-thumbs-up"></i></button>
+                    <button class="modal-action-btn share-btn" title="Discussion"><i class="bi bi-chat-dots"></i></button>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>

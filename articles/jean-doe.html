@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algèbre Linéaire - Phant_m</title>
+    <meta name="description" content="Introduction aux fondements mathématiques de l'espace vectoriel.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-container">
+                    <img src="../logo.svg" alt="Phant_m Logo" class="logo-img">
+                    <div class="logo-text">Phant_m</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link"><i class="bi bi-house"></i> Accueil</a></li>
+                        <li><a href="../index.html#articles" class="nav-link active"><i class="bi bi-file-earmark-text"></i> Articles</a></li>
+                        <li><a href="../index.html#contact" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="ad-sidebar-container" style="padding: 10px; border: 1px dashed #d7e3fc; border-radius: 12px; background: #fafafa; text-align: center; cursor: pointer;" onclick="triggerAd('sidebar-adsense')">
+                    <small style="font-size: 0.6rem; color: #bbb; text-transform: uppercase;">Publicité</small>
+                    <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #888;">
+                        <i class="bi bi-aspect-ratio" style="font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.7rem;">Sponsor Local</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <article class="page active">
+                <a href="../index.html" class="back-btn-article" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #28a745; margin-bottom: 20px; font-family: monospace; font-weight: bold;">
+                    <i class="bi bi-arrow-left"></i> [ RETOUR AU FLUX ]
+                </a>
+                <div class="article-meta">18 Janvier 2026</div>
+                <h1>Algèbre Linéaire</h1>
+                <div class="article-author">Jean Doe</div>
+                <hr class="modal-divider">
+                <div class="modal-text">
+                    <h3>Matrices et Vecteurs</h3>
+                    <p>L'algèbre linéaire est le langage universel des transformations. Une matrice n'est pas simplement un tableau de nombres, c'est une fonction qui transforme l'espace lui-même. Quand vous multipliez un vecteur par une matrice, vous ne faites pas un calcul : vous déplacez, tournez, étirez ou compressez la réalité mathématique.</p>
+                    
+                    <p>Les espaces vectoriels sont partout : les couleurs RGB forment un espace à 3 dimensions, les sons sont des vecteurs dans l'espace de Fourier, les images sont des matrices de pixels. Comprendre l'algèbre linéaire, c'est comprendre comment le monde numérique est structuré à son niveau le plus fondamental.</p>
+                    
+                    <div class="content-gate">
+                        <div class="adsense-slot-middle" style="min-height:90px; margin-bottom:15px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">ANNONCE SPONSORISÉE</div>
+                        <div class="gate-overlay">
+                            <button class="premium-unlock pulse" onclick="triggerAd('click-reward'); unlockContent(this)">
+                                <i class="bi bi-lock-fill"></i> [ DÉVERROUILLER LA SESSION EXCLUSIVE ]
+                            </button>
+                        </div>
+                        <div class="locked-content" style="display:none; filter: blur(5px);">
+                            <p>La décomposition en valeurs singulières (SVD) est l'outil le plus puissant de l'algèbre linéaire moderne. Elle permet de compresser des images, de recommander des films, de détecter des anomalies dans des données massives. Toute matrice peut être décomposée en trois matrices plus simples : U, Σ et V^T.</p>
+                            
+                            <p>Les vecteurs propres révèlent les directions privilégiées d'une transformation. Dans l'analyse en composantes principales (PCA), ils identifient les axes de variance maximale dans un nuage de points. C'est ainsi que l'on réduit des données à 1000 dimensions en 2D visualisables sans perdre l'essentiel de l'information.</p>
+                            
+                            <p>Les produits scalaires mesurent la similarité entre vecteurs. Deux vecteurs orthogonaux (produit scalaire nul) sont totalement indépendants. C'est le principe des bases orthonormées qui simplifient tous les calculs. Dans l'espace de Hilbert, cette idée s'étend à l'infini : les fonctions deviennent des vecteurs, les intégrales des produits scalaires.</p>
+                            
+                            <p>L'algèbre linéaire n'est pas une discipline abstraite réservée aux mathématiciens. C'est l'infrastructure invisible de l'ère numérique : chaque pixel affiché, chaque son joué, chaque prédiction d'IA repose sur des opérations matricielles. Maîtriser les vecteurs, c'est maîtriser le code source de la réalité computationnelle.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="adsense-slot-bottom" style="min-height:250px; margin-top:20px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">PUBLICITÉ CIBLÉE</div>
+                </div>
+                <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; gap: 15px;">
+                    <button class="modal-action-btn like-btn" title="Like"><i class="bi bi-heart"></i></button>
+                    <button class="modal-action-btn second-like-btn" title="J'aime"><i class="bi bi-hand-thumbs-up"></i></button>
+                    <button class="modal-action-btn share-btn" title="Discussion"><i class="bi bi-chat-dots"></i></button>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>

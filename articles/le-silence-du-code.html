@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Équilibre du Vide - Phant_m</title>
+    <meta name="description" content="En algèbre comme en design, le vide a une valeur.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-container">
+                    <img src="../logo.svg" alt="Phant_m Logo" class="logo-img">
+                    <div class="logo-text">Phant_m</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link"><i class="bi bi-house"></i> Accueil</a></li>
+                        <li><a href="../index.html#articles" class="nav-link active"><i class="bi bi-file-earmark-text"></i> Articles</a></li>
+                        <li><a href="../index.html#contact" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="ad-sidebar-container" style="padding: 10px; border: 1px dashed #d7e3fc; border-radius: 12px; background: #fafafa; text-align: center; cursor: pointer;" onclick="triggerAd('sidebar-adsense')">
+                    <small style="font-size: 0.6rem; color: #bbb; text-transform: uppercase;">Publicité</small>
+                    <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #888;">
+                        <i class="bi bi-aspect-ratio" style="font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.7rem;">Sponsor Local</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <article class="page active">
+                <a href="../index.html" class="back-btn-article" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #28a745; margin-bottom: 20px; font-family: monospace; font-weight: bold;">
+                    <i class="bi bi-arrow-left"></i> [ RETOUR AU FLUX ]
+                </a>
+                <div class="article-meta">06 Février 2026</div>
+                <h1>L'Équilibre du Vide</h1>
+                <div class="article-author">Anonyme</div>
+                <hr class="modal-divider">
+                <div class="modal-text">
+                    <h3>Le Silence entre les Lignes</h3>
+                    <p>En algèbre comme en design, le vide a une valeur. L'espace négatif n'est pas l'absence de contenu mais une présence active qui structure la perception. Dans une équation, le zéro n'est pas rien : c'est l'élément neutre qui permet à l'addition d'exister. Dans une interface, les marges ne sont pas du gaspillage mais l'oxygène qui permet au contenu de respirer.</p>
+                    
+                    <p>Le minimalisme mathématique enseigne que la complexité émerge de règles simples. Les fractales de Mandelbrot naissent d'une équation à deux lignes. Les automates cellulaires de Conway créent des univers à partir de trois règles. Phant_m applique ce principe : moins de code, plus de possibilités.</p>
+                    
+                    <div class="content-gate">
+                        <div class="adsense-slot-middle" style="min-height:90px; margin-bottom:15px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">ANNONCE SPONSORISÉE</div>
+                        <div class="gate-overlay">
+                            <button class="premium-unlock pulse" onclick="triggerAd('click-reward'); unlockContent(this)">
+                                <i class="bi bi-lock-fill"></i> [ DÉVERROUILLER LA SESSION EXCLUSIVE ]
+                            </button>
+                        </div>
+                        <div class="locked-content" style="display:none; filter: blur(5px);">
+                            <p>La théorie de l'information de Shannon quantifie le silence : l'entropie mesure l'incertitude, la redondance mesure le prévisible. Un message optimal maximise l'information par bit, éliminant tout superflu. Un design optimal fait de même : chaque pixel doit justifier son existence par sa contribution à la fonction.</p>
+                            
+                            <p>Les espaces de Hilbert nous enseignent que l'orthogonalité est une forme de silence : deux vecteurs orthogonaux ne se "parlent" pas, ils coexistent sans interférence. Dans une interface, les éléments orthogonaux (visuellement et fonctionnellement) permettent une navigation sans confusion.</p>
+                            
+                            <p>Le paradoxe du vide est qu'il amplifie ce qui l'entoure. Une note de musique n'existe que par contraste avec le silence. Un mot n'a de sens que séparé des autres par des espaces. Un bouton n'est cliquable que s'il est isolé dans un champ de vide. La densité tue l'interaction, l'espace la libère.</p>
+                            
+                            <p>L'équilibre du vide est un art subtil : trop peu et le design étouffe, trop et il se dissout. La règle d'or est le ratio 1:1.618 entre contenu et espace négatif. Ce n'est pas une convention arbitraire mais une propriété mathématique qui émerge naturellement dans les systèmes auto-organisés. Le silence n'est pas à ajouter : il est à préserver.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="adsense-slot-bottom" style="min-height:250px; margin-top:20px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">PUBLICITÉ CIBLÉE</div>
+                </div>
+                <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; gap: 15px;">
+                    <button class="modal-action-btn like-btn" title="Like"><i class="bi bi-heart"></i></button>
+                    <button class="modal-action-btn second-like-btn" title="J'aime"><i class="bi bi-hand-thumbs-up"></i></button>
+                    <button class="modal-action-btn share-btn" title="Discussion"><i class="bi bi-chat-dots"></i></button>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>
