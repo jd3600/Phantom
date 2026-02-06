@@ -58,4 +58,6 @@ Cette structure est **AdSense-Ready** :
 - [x] Performance brute (Zéro framework lourd).
 - [x] Prêt pour la **Google Search Console**.
 
-**Phant_m : L'algèbre ne ment jamais.**
+---
+
+## Phant_m : L'algèbre ne ment **jamais.**
