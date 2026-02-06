@@ -24,7 +24,7 @@ phant-m-dist/
     ├── nativ.html
     ├── jean-doe.html
     └── ... 
-
+```
 
 ## ✨ Les Lois du Lab
 
