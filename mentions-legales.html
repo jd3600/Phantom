@@ -3,23 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions Légales - Phant_m</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Mentions Légales | Phant_m Lab</title>
     <style>
-        body { background: #fff; padding: 50px 20px; font-family: sans-serif; color: #333; }
-        .container { max-width: 700px; margin: 0 auto; }
-        h1 { color: #28a745; }
+        :root {
+            --bg: #0a0a0a;
+            --text: #e0e0e0;
+            --accent: #00ff41; /* Vert terminal */
+            --border: #333;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            border: 1px solid var(--border);
+            padding: 30px;
+            background: #111;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 25px;
+            font-size: 1.1em;
+        }
+
+        p, li {
+            font-size: 0.95em;
+            color: #ccc;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            border: 1px solid var(--accent);
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin: 30px 0;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Mentions Légales</h1>
-        <p><strong>Éditeur :</strong> Phant_m Lab - T.</p>
-        <p><strong>Hébergement :</strong> Ce site est un portail statique.</p>
-        <p><strong>Propriété :</strong> Tous les articles générés par l'algèbre Phant_m sont la propriété du Lab.</p>
-        <p><strong>Contact :</strong> contact@phantm.com | +687 71.75.53</p>
-        <br>
-        <a href="index.html" style="color: #28a745; text-decoration: none; font-weight: bold;">← Retour au Portail</a>
-    </div>
+
+<div class="container">
+    <h1>Mentions Légales</h1>
+
+    <section>
+        <h3>1. Édition du site</h3>
+        <p>
+            Le site <strong>Phant_m Lab</strong> est une plateforme expérimentale éditée par :<br>
+            <strong>T.</strong><br>
+            Domicilié à : Nouméa, Nouvelle-Calédonie<br>
+            Contact : <a href="mailto:contact@phantm.com">contact@phantm.com</a> | +687 71.75.53
+        </p>
+    </section>
+
+    <section>
+        <h3>2. Hébergement</h3>
+        <p>
+            Le site est hébergé par la société <strong>Cloudflare Inc.</strong><br>
+            Siège social : 101 Townsend St, San Francisco, CA 94107, États-Unis.<br>
+            Site web : <a href="https://www.cloudflare.com" target="_blank">www.cloudflare.com</a>
+        </p>
+    </section>
+
+    <section>
+        <h3>3. Propriété Intellectuelle</h3>
+        <p>
+            L'ensemble du contenu (textes, graphismes, logos, icônes) est la propriété exclusive de <strong>Phant_m Lab</strong>, sauf mention contraire. 
+            Toute reproduction, distribution ou modification de ces éléments, sans l'accord écrit de l'éditeur, est strictement interdite et pourra être considérée comme une contrefaçon.
+        </p>
+    </section>
+
+    <section>
+        <h3>4. Responsabilité</h3>
+        <p>
+            Phant_m Lab s'efforce de fournir des informations précises, mais ne saurait être tenu responsable des erreurs ou omissions. L'utilisateur utilise le site et ses outils d'algèbre numérique sous sa propre responsabilité.
+        </p>
+    </section>
+
+    <section>
+        <h3>5. Droit Applicable</h3>
+        <p>
+            Le présent site est soumis au droit en vigueur en <strong>Nouvelle-Calédonie</strong>.
+        </p>
+    </section>
+
+    <a href="index.html" class="back-link">← Retour au Portail</a>
+</div>
+
 </body>
 </html>
