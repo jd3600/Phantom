@@ -3,25 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confidentialité - Phant_m</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Confidentialité | Phant_m Lab</title>
     <style>
-        body { background: #fff; padding: 50px 20px; font-family: sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 700px; margin: 0 auto; }
-        h1 { color: #28a745; border-bottom: 2px solid #28a745; padding-bottom: 10px; }
-        .back-link { display: inline-block; margin-top: 30px; color: #28a745; text-decoration: none; font-weight: bold; }
+        :root {
+            --bg: #050505;
+            --text: #e0e0e0;
+            --accent: #00ff41;
+            --border: #222;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- LE CODE EN ARRIÈRE-PLAN --- */
+        body::before {
+            content: "localStorage.getItem('phantm_dist_stats'); // Privacy Protocol Active... [ENCRYPTED] // cookie_consent: true; // ad_tracking: false; // node.status = 'anonymous'; // routing through Cloudflare Edge...";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            color: rgba(0, 255, 65, 0.03);
+            white-space: pre-wrap;
+            word-break: break-all;
+            z-index: -1;
+            padding: 20px;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 800px;
+            border: 1px solid var(--border);
+            padding: 30px;
+            background: rgba(15, 15, 15, 0.95);
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+
+        h1 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 25px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: "> ";
+            margin-right: 10px;
+        }
+
+        p, li {
+            font-size: 0.95em;
+            color: #aaa;
+        }
+
+        strong {
+            color: var(--accent);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            background: var(--accent);
+            color: var(--bg);
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            border: 1px solid var(--accent);
+            font-weight: bold;
+        }
+
+        .container::after {
+            content: " ";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Politique de Confidentialité</h1>
-        <p><strong>Dernière mise à jour :</strong> 06 Février 2026</p>
-        <p>Le projet Phant_m Lab respecte votre vie privée. Voici comment nous traitons vos données :</p>
-        <h3>1. LocalStorage</h3>
-        <p>Nous utilisons le stockage local de votre navigateur (LocalStorage) pour mémoriser vos interactions avec les articles (déblocages, likes). Ces données ne quittent jamais votre terminal.</p>
-        <h3>2. Google AdSense</h3>
-        <p>Ce site utilise Google AdSense pour diffuser des annonces. Google utilise des cookies pour servir des publicités basées sur vos visites. Vous pouvez gérer vos préférences via les paramètres de publicité Google.</p>
-        <a href="index.html" class="back-link">← Retour au Portail</a>
-    </div>
+
+<div class="container">
+    <h1>Politique de Confidentialité</h1>
+    <p><em>Dernière mise à jour : 06 Février 2026</em></p>
+
+    <p>Le projet <strong>Phant_m Lab</strong> accorde une importance capitale à la transparence et à la protection de votre vie privée.</p>
+
+    <section>
+        <h3>1. LocalStorage (Données Locales)</h3>
+        <p>
+            Nous utilisons le stockage local de votre navigateur (<code>localStorage</code>) via la clé <code>phantm_dist_stats</code> pour mémoriser vos interactions (déblocages, progression, likes).<br>
+            <strong>Note importante :</strong> Ces données sont stockées exclusivement sur votre terminal. Phant_m Lab n'a aucun accès serveur à ces informations et ne les revend à aucun tiers.
+        </p>
+    </section>
+
+    <section>
+        <h3>2. Cookies et Publicités (Google AdSense)</h3>
+        <p>Ce site utilise <strong>Google AdSense</strong> pour diffuser des annonces.</p>
+        <ul>
+            <li>Les fournisseurs tiers, y compris Google, utilisent des cookies pour diffuser des annonces basées sur les visites antérieures des utilisateurs sur ce site ou sur d'autres sites Web.</li>
+            <li>Grâce aux cookies publicitaires, Google et ses partenaires peuvent diffuser des annonces en fonction de votre navigation sur nos pages.</li>
+            <li>Vous pouvez choisir de désactiver la publicité personnalisée dans les <a href="https://www.google.com/settings/ads" target="_blank">Paramètres de publicité Google</a>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>3. Fichiers Journaux (Logs)</h3>
+        <p>
+            Comme la plupart des sites web, nos serveurs (via Cloudflare) peuvent enregistrer automatiquement des informations telles que votre adresse IP, le type de navigateur, et l'heure de la visite à des fins de sécurité et d'optimisation technique.
+        </p>
+    </section>
+
+    <section>
+        <h3>4. Vos Droits</h3>
+        <p>
+            Conformément aux lois sur la protection des données, vous avez le droit de supprimer vos données locales à tout moment en vidant le cache de votre navigateur.
+        </p>
+    </section>
+
+    <section>
+        <h3>5. Contact</h3>
+        <p>
+            Pour toute question concernant cette politique, vous pouvez nous contacter à l'adresse suivante : <a href="mailto:contact@phantm.com">contact@phantm.com</a>
+        </p>
+    </section>
+
+    <a href="index.html" class="back-link">← Retour au Portail</a>
+</div>
+
 </body>
 </html>
