@@ -6,10 +6,10 @@
     <title>Mentions Légales | Phant_m Lab</title>
     <style>
         :root {
-            --bg: #0a0a0a;
+            --bg: #050505;
             --text: #e0e0e0;
-            --accent: #00ff41; /* Vert terminal */
-            --border: #333;
+            --accent: #00ff41;
+            --border: #222;
         }
 
         body {
@@ -21,14 +21,35 @@
             padding: 40px 20px;
             display: flex;
             justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- LE CODE EN ARRIÈRE-PLAN --- */
+        body::before {
+            content: "function phantmInit() { const entropy = Math.random(); if (entropy > 0.5) { console.log('Void active'); } return Object.freeze({status: 'locked', coords: [22.27, 166.44]}); } // Scanning distribution... phantm_dist_stats.update(); // 0xAF44BB22 // geometry.nonEuclidean.render();";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            color: rgba(0, 255, 65, 0.03); /* Très subtil */
+            white-space: pre-wrap;
+            word-break: break-all;
+            z-index: -1;
+            padding: 20px;
+            pointer-events: none;
         }
 
         .container {
             max-width: 800px;
             border: 1px solid var(--border);
             padding: 30px;
-            background: #111;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: rgba(15, 15, 15, 0.95); /* Semi-transparent pour voir le code derrière */
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+            backdrop-filter: blur(5px);
+            position: relative;
         }
 
         h1 {
@@ -37,17 +58,25 @@
             padding-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
         }
 
         h3 {
             color: var(--accent);
             margin-top: 25px;
             font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: "> ";
+            margin-right: 10px;
         }
 
         p, li {
             font-size: 0.95em;
-            color: #ccc;
+            color: #aaa;
         }
 
         a {
@@ -59,6 +88,7 @@
         a:hover {
             background: var(--accent);
             color: var(--bg);
+            box-shadow: 0 0 15px var(--accent);
         }
 
         .back-link {
@@ -66,12 +96,17 @@
             margin-top: 40px;
             padding: 10px 20px;
             border: 1px solid var(--accent);
+            font-weight: bold;
         }
 
-        hr {
-            border: 0;
-            border-top: 1px solid var(--border);
-            margin: 30px 0;
+        /* Scanline effect */
+        .container::after {
+            content: " ";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -85,7 +120,7 @@
         <p>
             Le site <strong>Phant_m Lab</strong> est une plateforme expérimentale éditée par :<br>
             <strong>T.</strong><br>
-            Domicilié à : Nouméa, Nouvelle-Calédonie<br>
+            Domicilié à : Dumbea, Nouvelle-Calédonie<br>
             Contact : <a href="mailto:contact@phantm.com">contact@phantm.com</a> | +687 71.75.53
         </p>
     </section>
@@ -103,14 +138,13 @@
         <h3>3. Propriété Intellectuelle</h3>
         <p>
             L'ensemble du contenu (textes, graphismes, logos, icônes) est la propriété exclusive de <strong>Phant_m Lab</strong>, sauf mention contraire. 
-            Toute reproduction, distribution ou modification de ces éléments, sans l'accord écrit de l'éditeur, est strictement interdite et pourra être considérée comme une contrefaçon.
         </p>
     </section>
 
     <section>
         <h3>4. Responsabilité</h3>
         <p>
-            Phant_m Lab s'efforce de fournir des informations précises, mais ne saurait être tenu responsable des erreurs ou omissions. L'utilisateur utilise le site et ses outils d'algèbre numérique sous sa propre responsabilité.
+            L'utilisateur utilise le site et ses outils d'algèbre numérique sous sa propre responsabilité.
         </p>
     </section>
 
@@ -122,7 +156,3 @@
     </section>
 
     <a href="index.html" class="back-link">← Retour au Portail</a>
-</div>
-
-</body>
-</html>
