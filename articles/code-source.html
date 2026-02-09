@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Code Source du Hasard</title>
+    <meta name="description" content="L'illusion de l'imprévisibilité : comment le Phant_m Lab déconstruit le chaos numérique.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-container">
+                    <img src="../logo.svg" alt="Phant_m Logo" class="logo-img">
+                    <div class="logo-text">Phant_m</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link"><i class="bi bi-house"></i> Accueil</a></li>
+                        <li><a href="../index.html#articles" class="nav-link active"><i class="bi bi-file-earmark-text"></i> Articles</a></li>
+                        <li><a href="../index.html#contact" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="ad-sidebar-container" style="padding: 10px; border: 1px dashed #d7e3fc; border-radius: 12px; background: #fafafa; text-align: center; cursor: pointer;" onclick="triggerAd('sidebar-adsense')">
+                    <small style="font-size: 0.6rem; color: #bbb; text-transform: uppercase;">Publicité</small>
+                    <div style="height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #888;">
+                        <i class="bi bi-aspect-ratio" style="font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.7rem;">Sponsor Local</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <article class="page active">
+                <a href="../index.html" class="back-btn-article" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #28a745; margin-bottom: 20px; font-family: monospace; font-weight: bold;">
+                    <i class="bi bi-arrow-left"></i> [ RETOUR AU FLUX ]
+                </a>
+                <div class="article-meta">08 Février 2026</div>
+                <h1>Le Code Source du Hasard</h1>
+                <div class="article-author">Pr.</div>
+                <hr class="modal-divider">
+                <div class="modal-text">
+                    <h3>L'Illusion du Chaos Numérique</h3>
+                    <p>Dans l'univers binaire, le hasard est un intrus. Pour un processeur, l'imprévisibilité pure est une hérésie. Pourtant, nous utilisons quotidiennement des fonctions "aléatoires" pour sécuriser nos transactions, générer des mondes virtuels ou simuler des phénomènes complexes. Au <strong>Phant_m Lab</strong>, nous avons décidé de soulever le capot des générateurs de nombres pseudo-aléatoires (PRNG) pour y débusquer le déterminisme caché.</p>
+                    
+                    <p>Le hasard informatique n'est pas une absence de règle, c'est une règle si complexe qu'elle échappe à la perception immédiate. Tout commence par une "graine" (seed), une valeur initiale souvent tirée de l'horloge système. À partir de cette graine, un algorithme déterministe déploie une suite de nombres qui *semble* désordonnée. Mais si vous possédez la graine et l'algorithme, le futur devient aussi prévisible qu'une ligne droite. Le hasard n'est qu'une prison dont les murs sont faits de fonctions mathématiques.</p>
+                    
+                    <p>Nous explorons les limites de ce que nous appelons "l'Entropie Phant_m". En capturant le bruit thermique des processeurs ou les micro-variations de latence réseau entre Dumbea et le reste du monde, nous tentons d'injecter une dose de réalité biologique dans le froid du code. Mais même là, la question demeure : le hasard existe-t-il vraiment, ou n'est-il que le nom que nous donnons à notre ignorance des variables initiales ?</p>
+
+                    <div class="content-gate">
+                        <div class="adsense-slot-middle" style="min-height:90px; margin-bottom:15px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">ANNONCE SPONSORISÉE</div>
+                        <div class="gate-overlay">
+                            <button class="premium-unlock pulse" onclick="triggerAd('click-reward'); unlockContent(this)">
+                                <i class="bi bi-lock-fill"></i> [ DÉVERROUILLER LA SESSION EXCLUSIVE ]
+                            </button>
+                        </div>
+                        <div class="locked-content" style="display:none; filter: blur(5px);">
+                            <p>Pour approfondir, nous utilisons la méthode de la **Congruence Linéaire**, modélisée par la formule :</p>
+                            <p style="text-align: center;">$X_{n+1} = (aX_n + c) \mod m$</p>
+                            <p>Où chaque nombre dépend mathématiquement du précédent. En manipulant les constantes $a, c$ et $m$, le Lab est capable de créer des "poches de hasard" où la prévisibilité est repoussée aux limites de la puissance de calcul actuelle. C'est ici que la cryptographie Phant_m puise sa force : dans l'art de cacher l'ordre derrière une apparence de chaos total.</p>
+                            
+                            <p>L'enjeu est colossal. Dans un monde dirigé par des algorithmes, celui qui maîtrise le hasard maîtrise la sécurité. Si un attaquant parvient à "prédire" la graine d'un système, toutes les barrières s'effondrent. C'est pourquoi nous travaillons sur des générateurs de nombres aléatoires quantiques (QRNG), exploitant la superposition pour obtenir une imprévisibilité qui ne repose plus sur une formule, mais sur la nature même de la matière.</p>
+                            
+                            <p>Le hasard est le dernier rempart de la liberté individuelle dans la matrice. Si tout est prévisible, tout est contrôlable. En développant des outils de "brouillage d'identité" basés sur notre propre code source du hasard, nous redonnons à l'utilisateur du Lab une part d'imprévu, une zone d'ombre où même les algorithmes de surveillance de 2026 ne peuvent pas prédire le prochain mouvement.</p>
+                            
+                            <p>En conclusion, le hasard n'est pas l'ennemi de la logique, c'est son couronnement. Apprendre à coder le chaos, c'est apprendre à simuler la vie. Dans les entrailles du Phant_m Lab, nous continuerons à jouer aux dés avec le code, non pas pour gagner, mais pour comprendre la structure du jeu lui-même.</p>
+
+                            <p><i class="bi bi-chat-dots"></i></p>
+                        </div>
+                    </div>
+                    
+                    <div class="adsense-slot-bottom" style="min-height:250px; margin-top:20px; background:#f9f9f9; border:1px solid #eee; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#ccc; border-radius:8px;">PUBLICITÉ CIBLÉE</div>
+                </div>
+                <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; gap: 15px;">
+                    <button class="modal-action-btn like-btn" title="Like"><i class="bi bi-heart"></i></button>
+                    <button class="modal-action-btn second-like-btn" title="J'aime"><i class="bi bi-hand-thumbs-up"></i></button>
+                    <button class="modal-action-btn share-btn" title="Discussion"><i class="bi bi-chat-dots"></i></button>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>
