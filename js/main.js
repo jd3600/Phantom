@@ -71,16 +71,18 @@ const injectInFeedAd = () => {
         adCard.style.borderRadius = "15px";
         
         adCard.innerHTML = `
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2582532644612570" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-format="fluid"
-                 data-ad-layout-key="-fb+5w+4e-db+86"
-                 data-ad-client="ca-pub-2582532644612570"
-                 data-ad-slot="7987969796"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class="adsense-slot-middle" style="margin-bottom:15px;">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2582532644612570" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block; text-align:center;"
+                         data-ad-layout="in-article"
+                         data-ad-format="fluid"
+                         data-ad-client="ca-pub-2582532644612570"
+                         data-ad-slot="2242585455"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         `;
 
         articles[i].after(adCard);
