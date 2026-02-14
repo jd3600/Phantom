@@ -55,11 +55,9 @@ function openLegalModal() {
 }
 
 // --- 5. INJECTION PUB NATIVE (LISTE) ---
-const currentAd = { title: "Algorithme Phant_m : Vision 2026", author: "Sponsor Lab" };
 let adCounter = 0;
 
 const injectInFeedAd = () => {
-    // On utilise Array.from pour figer la liste et éviter que la boucle ne compte les pubs ajoutées
     const articles = Array.from(document.querySelectorAll('.article-item'));
     if (articles.length === 0) return;
 
@@ -69,21 +67,23 @@ const injectInFeedAd = () => {
         adCard.className = 'article-item ad-native';
         adCard.style.border = "1px dashed #28a745";
         adCard.style.background = "rgba(40, 167, 69, 0.02)";
+        adCard.style.padding = "1.5rem";
+        adCard.style.borderRadius = "15px";
         
         adCard.innerHTML = `
-            <div class="article-meta" style="color: #28a745;">[ SPONSORISÉ ]</div>
-            <div class="article-title">${currentAd.title}</div>
-            <div class="article-author">${currentAd.author}</div>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2582532644612570" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-fb+5w+4e-db+86"
+                 data-ad-client="ca-pub-2582532644612570"
+                 data-ad-slot="7987969796"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         `;
 
-        // CORRECT : On insère APRÈS l'article cible de la boucle
         articles[i].after(adCard);
-
-        adCard.onclick = (e) => {
-            e.stopPropagation();
-            triggerAd('native-feed-ad');
-            window.open('https://google.com', '_blank');
-        };
         adCounter++;
     }
 };
