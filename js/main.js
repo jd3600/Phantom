@@ -91,9 +91,9 @@ const injectInFeedAd = () => {
         
         adCard.innerHTML = `
             <div style="text-align:center;">
-                <p style="color:#28a745; font-family:monospace; font-size:0.8rem;">[ SPONSOR_SYSTEM<3 ]</p>
-                <p style="margin:10px 0; font-weight:bold; color: #333;">Données cryptographiques %</p>
-                <div style="display:inline-block; border:1px solid #28a745; padding:5px 15px; color:#28a745; font-family:monospace; font-size:0.9rem;">D_COUVRIR</div>
+                <p style="color:#28a745; font-family:monospace; font-size:0.8rem;">SPONSOR_SYSTEM<3</p>
+                <p style="margin:10px 0; font-weight:bold; color: #333;">Données🎲cryptographiques</p>
+                <div style="display:inline-block; border:1px solid #28a745; padding:5px 15px; color:#28a745; font-family:monospace; font-size:0.9rem;">DECOUVRIR</div>
             </div>
         `;
 
