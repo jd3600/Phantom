@@ -1,3 +1,11 @@
+/**
+ * PHANT_M - L'Âme Logique (Version Adsterra Boosted)
+ * URL Smartlink : https://www.effectivegatecpm.com/rzvu2f40b?key=6fac10996ba8761c89d78efe5976389b
+ */
+
+// --- CONFIGURATION PHANT_M ---
+const ADSTERRA_LINK = "https://www.effectivegatecpm.com/rzvu2f40b?key=6fac10996ba8761c89d78efe5976389b";
+
 // --- 1. GESTION DES STATISTIQUES (VERSION DIST) ---
 let phantmStats = JSON.parse(localStorage.getItem('phantm_dist_stats')) || {};
 
@@ -5,6 +13,13 @@ const triggerAd = (slug) => {
     if (!slug) return;
     phantmStats[slug] = (phantmStats[slug] || 0) + 1;
     localStorage.setItem('phantm_dist_stats', JSON.stringify(phantmStats));
+    
+    // Déclenchement automatique du Smartlink pour certains slugs
+    const adSlugs = ['internal-article-ad', 'sidebar-fixed-ad', 'native-ad-click', 'engagement-article'];
+    if (adSlugs.includes(slug)) {
+        window.open(ADSTERRA_LINK, '_blank');
+    }
+    
     console.clear();
     console.table(phantmStats);
 };
@@ -28,10 +43,15 @@ const triggerArt = () => {
 
 // --- 3. GATE & REWARD - UNLOCK CONTENT ---
 function unlockContent(btn) {
+    // [BOOST] : Ouverture du Smartlink au moment du déblocage
+    window.open(ADSTERRA_LINK, '_blank');
+
     const container = btn.closest('.content-gate');
     const locked = container.querySelector('.locked-content');
-    locked.style.display = 'block';
-    locked.style.filter = 'none';
+    if (locked) {
+        locked.style.display = 'block';
+        locked.style.filter = 'none';
+    }
     btn.parentElement.style.display = 'none';
     
     let unlockStats = JSON.parse(localStorage.getItem('phantm_unlock_stats')) || {};
@@ -54,39 +74,31 @@ function openLegalModal() {
     }
 }
 
-// --- 5. INJECTION PUB NATIVE (LISTE) ---
-let adCounter = 0;
-
+// --- 5. INJECTION PUB NATIVE (LISTE - REMPLACEMENT ADSENSE) ---
 const injectInFeedAd = () => {
     const articles = Array.from(document.querySelectorAll('.article-item'));
     if (articles.length === 0) return;
 
-    // On injecte tous les 3 articles (index 2, 5, 8...)
     for (let i = 2; i < articles.length; i += 3) {
         const adCard = document.createElement('div');
         adCard.className = 'article-item ad-native';
         adCard.style.border = "1px dashed #28a745";
-        adCard.style.background = "rgba(40, 167, 69, 0.02)";
+        adCard.style.background = "rgba(40, 167, 69, 0.05)";
         adCard.style.padding = "1.5rem";
         adCard.style.borderRadius = "15px";
+        adCard.style.cursor = "pointer";
+        adCard.style.marginBottom = "20px";
         
         adCard.innerHTML = `
-            <div class="adsense-slot-middle" style="margin-bottom:15px;">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2582532644612570" crossorigin="anonymous"></script>
-                    <ins class="adsbygoogle"
-                         style="display:block; text-align:center;"
-                         data-ad-layout="in-article"
-                         data-ad-format="fluid"
-                         data-ad-client="ca-pub-2582532644612570"
-                         data-ad-slot="2242585455"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+            <div style="text-align:center;">
+                <p style="color:#28a745; font-family:monospace; font-size:0.8rem;">[ SPONSOR_SYSTEM_CONTENT ]</p>
+                <p style="margin:10px 0; font-weight:bold; color: #333;">Accéder aux ressources cryptographiques</p>
+                <div style="display:inline-block; border:1px solid #28a745; padding:5px 15px; color:#28a745; font-family:monospace; font-size:0.9rem;">DÉCOUVRIR</div>
             </div>
         `;
 
+        adCard.onclick = () => triggerAd('native-ad-click');
         articles[i].after(adCard);
-        adCounter++;
     }
 };
 
@@ -146,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lancement
     initModal();
     initCanvasAnimation();
-    injectInFeedAd(); // Injection des pubs dans le flux
+    injectInFeedAd(); 
     initArticleActionButtons();
 });
 
@@ -166,10 +178,10 @@ function initModal() {
             
             const content = article.querySelector('.full-article-content')?.innerHTML || "";
             const adBanner = `
-                <div class="article-ad-box" style="margin-top:25px; padding:20px; background:#fcfcfc; border-radius:15px; border:1px solid #eee; text-align:center;">
-                    <small style="color:#bbb; font-size:0.7rem;">PUBLICITÉ</small>
-                    <div style="margin-top:10px; color:#444; font-weight:bold;">Sponsor de l'article</div>
-                    <button style="margin-top:10px; padding:5px 15px; border-radius:20px; border:1px solid #d7e3fc; background:white; cursor:pointer;" onclick="triggerAd('internal-article-ad')">En savoir plus</button>
+                <div class="article-ad-box" style="margin-top:25px; padding:20px; background:#f9f9f9; border-radius:15px; border:1px dashed #28a745; text-align:center;">
+                    <small style="color:#28a745; font-family:monospace; font-size:0.7rem;">[ SPONSOR_GATE ]</small>
+                    <div style="margin-top:10px; color:#444; font-weight:bold;">Soutenir le Lab Phant_m</div>
+                    <button style="margin-top:10px; padding:8px 20px; border-radius:4px; border:1px solid #28a745; background:white; color:#28a745; cursor:pointer; font-family:monospace;" onclick="triggerAd('internal-article-ad')">VOIR L'OFFRE</button>
                 </div>`;
             
             document.querySelector('.modal-text').innerHTML = content + adBanner;
@@ -179,10 +191,13 @@ function initModal() {
         };
     });
 
-    document.querySelector('.close-modal').onclick = () => {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    };
+    const closeBtn = document.querySelector('.close-modal');
+    if(closeBtn) {
+        closeBtn.onclick = () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+    }
 }
 
 function initCanvasAnimation() {
